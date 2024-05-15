@@ -1,23 +1,16 @@
 import React from "react";
 
-function TodoItem() {
+function TodoItem({todo, todoToggleHandler, todoDeleteHandler}) {
   return (
-    <div style={{
-      maxWidth: "350px",
-      maxHeight: "170px",
-      border: "5px solid green",
-      borderRadius: "10px",
-      padding:"5px",
+    <div className="todo-item">
+      <h3>{todo.title}</h3>
+      <p>{todo.content}</p>
 
-      display:"flex",
-      flexDirection:"column"
-
-
-    }}>
-      <h2>title</h2>
-      <p>내용</p>
-      <button>삭제</button>
-      <button>완료</button>
+      <div className="item-btn">
+      <button onClick={()=> todoToggleHandler(todo.id)}>
+        {todo.isDone ? "취소" : "완료"}</button>
+      <button onClick={()=> todoDeleteHandler(todo.id)}>삭제</button>
+      </div>
     </div>
   );
 }
