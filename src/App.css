@@ -1,20 +1,100 @@
+body {
+  display: flex;
+  justify-content: center;
+}
 .site {
   max-width: 1200px;
   min-height: 800px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
-.input-form {
+.head-title {
   display: flex;
+  justify-content: center;
+  color: green;
 }
+/* 입력 폼 */
+.top-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  background-color: #abcf93;
+  padding: 20px 25px;
+  border-radius: 15px;
+}
+input {
+  width: 300px;
+  height: 40px;
+  border-radius: 15px;
+  border: #ffffff;
+  padding-left: 10px;
+  margin: 5px 20px 5px 0px;
+}
+.add-btn {
+  background: green;
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 10px 40px 10px 40px;
+  font-size: 15px;
+  text-decoration: none;
+  border: green solid;
+  cursor: pointer;
+}
+/* 추가한 todo list */
+h1 {
+  margin-left: 15px;
+}
+.working-done {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+}
 .todo-item {
-  max-width: 350px;
-  max-height: 170px;
+  width: 340px;
+  height: 170px;
+  margin: 10px;
   border: 5px solid green;
   border-radius: 10px;
   padding: 15px;
 
   display: flex;
   flex-direction: column;
+}
+.item-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.first-btn {
+  background: #ffffff;
+  border-radius: 20px;
+  color: #000000;
+  font-size: 12px;
+  padding: 13px 40px;
+
+  border: solid #abcf93 4px;
+  text-decoration: none;
+}
+.first-btn:hover {
+  background: #c2e9a8;
+  text-decoration: none;
+}
+.second-btn {
+  background: #ffffff;
+  border-radius: 20px;
+  color: #000000;
+  font-size: 12px;
+  padding: 13px 40px;
+  border: solid #b6b6b6 4px;
+  text-decoration: none;
+}
+.second-btn:hover {
+  background: #d4d4d4;
+  text-decoration: none;
+}
+hr {
+  width: 90%;
+  border: gray 1px dashed;
 }

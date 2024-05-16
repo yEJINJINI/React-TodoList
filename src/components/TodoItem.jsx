@@ -7,9 +7,11 @@ function TodoItem({todo, todoToggleHandler, todoDeleteHandler}) {
       <p>{todo.content}</p>
 
       <div className="item-btn">
-      <button onClick={()=> todoToggleHandler(todo.id)}>
+      <button className="first-btn" 
+      onClick={()=> todoToggleHandler(todo.id)}>
         {todo.isDone ? "취소" : "완료"}</button>
-      <button onClick={()=> todoDeleteHandler(todo.id)}>삭제</button>
+      <button className="second-btn" 
+      onClick={()=> todoDeleteHandler(todo.id)}>삭제</button>
       </div>
     </div>
   );
